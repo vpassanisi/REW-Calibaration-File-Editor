@@ -32,13 +32,30 @@ const FileInput = () => {
   };
   return (
     <Fragment>
-      <input
-        type="file"
-        className="text-white"
-        onChange={(e) => handleFile(e)}
-      />
-      <input type="number" onInput={(e) => setYMax(parseInt(e.target.value))} />
-      <input type="number" onInput={(e) => setYMin(parseInt(e.target.value))} />
+      <div className="w-90p flex flex-col items-center justify-center my-8">
+        <input
+          type="file"
+          className="text-white border-2 border-white rounded p-2 mb-4"
+          onChange={(e) => handleFile(e)}
+        />
+        <div className="flex flex-row items-center justify-center mb-4">
+          <div className="text-white mr-2">Max Y: </div>
+          <input
+            className="w-10"
+            type="number"
+            onInput={(e) => setYMax(parseInt(e.target.value))}
+          />
+        </div>
+        <div className="flex flex-row items-center justify-center mb-4">
+          <div className="text-white mr-2">Max X: </div>
+          <input
+            type="number"
+            className="w-10"
+            onInput={(e) => setYMin(parseInt(e.target.value))}
+          />
+        </div>
+      </div>
+
       <Chart freqData={freqData} dbData={dbData} yMax={yMax} yMin={yMin} />
     </Fragment>
   );
