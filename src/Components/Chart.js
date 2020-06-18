@@ -9,7 +9,7 @@ const Chart = (props) => {
     let str = "";
 
     for (let i = 0; i < freqData.length; i++) {
-      str = str + `${freqData[i]}, ${dbData[i]}`;
+      str = str + `${freqData[i]}, ${dbData[i]}\n`;
     }
 
     let textFile = null;

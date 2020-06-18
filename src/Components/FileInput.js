@@ -20,8 +20,8 @@ const FileInput = () => {
       dataArr.forEach((item) => {
         const arr = item.split(", ");
 
-        freqArr.push(arr[0]);
-        dbArr.push(arr[1]);
+        freqArr.push(parseFloat(arr[0].trim()));
+        dbArr.push(parseFloat(arr[1].trim()));
       });
 
       setFreqData(freqArr);
